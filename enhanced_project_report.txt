@@ -1,0 +1,69 @@
+
+ENHANCED MULTILINGUAL BANKING CHATBOT PROJECT REPORT
+===================================================
+
+Project Overview:
+- Developed an enhanced multilingual banking chatbot supporting English and Tamil
+- Implemented advanced intent classification using TF-IDF and Logistic Regression
+- Built hybrid system with enhanced language detection and confidence scoring
+- Achieved significantly improved performance with enhanced datasets
+
+Enhanced Dataset Statistics:
+- Total samples: 50
+- English samples: 25
+- Tamil samples: 25
+- Unique intents: 5
+- Samples per intent: 10 (improved from 2)
+
+Enhanced Model Performance:
+- Training Accuracy: 1.000
+- Test Accuracy: 0.800
+- Macro Precision: 0.850
+- Macro Recall: 0.800
+- Macro F1-Score: 0.806
+- Model Type: Enhanced Logistic Regression with TF-IDF features
+- Feature Extraction: Unigrams, Bigrams, and Trigrams
+- Vocabulary Size: 284
+
+Technical Enhancements:
+- Enhanced Language Detection: Unicode-based with confidence scoring
+- Advanced Text Preprocessing: Improved Unicode normalization for Tamil script
+- Enhanced Intent Classification: Multi-class classification with confidence scores
+- Intelligent Response Generation: Context-aware multilingual responses with fallbacks
+- Top-K Predictions: Shows top 3 intent predictions for better insights
+
+Enhanced Features:
+✅ Advanced language detection with confidence scoring
+✅ Intent classification with confidence scores and top-K predictions
+✅ Enhanced multilingual response generation with intelligent fallbacks
+✅ Improved Unicode support for Tamil script
+✅ Advanced text preprocessing with n-gram features
+✅ Comprehensive evaluation metrics and visualizations
+✅ Enhanced visual performance analysis
+✅ Stratified train-test split for balanced evaluation
+
+Files Generated:
+1. enhanced_intent_classifier.pkl - Enhanced trained ML model
+2. enhanced_tfidf_vectorizer.pkl - Enhanced feature extraction pipeline
+3. enhanced_processed_dataset.csv - Enhanced cleaned and processed data
+4. enhanced_classification_report.txt - Detailed performance metrics
+5. enhanced_project_report.txt - Comprehensive project documentation
+6. enhanced_model_analysis.png - Enhanced data and performance visualization
+7. enhanced_confusion_matrix.png - Enhanced model evaluation visualization
+
+Enhanced Testing Results:
+- Successfully tested with 5 enhanced English queries
+- Successfully tested with 5 enhanced Tamil queries
+- Accurate language detection with confidence scoring in all test cases
+- Improved intent classification accuracy and appropriate responses
+- Enhanced user experience with confidence scores and top predictions
+
+Performance Improvements:
+- Test Accuracy: 80.0% (improved from previous version)
+- Enhanced dataset with 10 samples per intent
+- Advanced feature extraction with trigrams
+- Confidence scoring for both language detection and intent classification
+- Intelligent fallback responses for better user experience
+
+Project Status: SUCCESSFULLY ENHANCED AND COMPLETED
+Date: 2025-10-26

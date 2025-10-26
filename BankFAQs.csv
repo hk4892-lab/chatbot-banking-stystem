@@ -1,0 +1,21 @@
+user,bot,intent
+I want to open a new account,You can open a new account by visiting our nearest branch with valid ID proof and address proof. Our team will guide you through the process.,account_opening
+How do I check my account balance,You can check your account balance through our mobile app internet banking or by visiting an ATM. You can also call our customer service.,balance_inquiry
+I lost my debit card,Please report your lost debit card immediately by calling our 24/7 helpline. We will block your card and issue a new one within 3-5 business days.,card_services
+What are the loan interest rates,Our loan interest rates vary based on the type of loan. Personal loans start from 10.5% and home loans from 8.5%. Please visit our branch for detailed information.,loan_inquiry
+How can I update my KYC details,You can update your KYC details by visiting our branch with updated documents or through our online portal with digital document upload.,kyc_update
+What is the minimum balance required,The minimum balance requirement varies by account type. Savings accounts require Rs.1000 and current accounts require Rs.5000 minimum balance.,account_info
+How do I apply for a credit card,You can apply for a credit card online through our website or mobile app. You can also visit our branch with income proof and ID documents.,credit_card
+What are your branch timings,Our branches are open Monday to Friday from 10 AM to 4 PM and Saturday from 10 AM to 2 PM. We are closed on Sundays and public holidays.,branch_info
+How do I transfer money online,You can transfer money through our internet banking or mobile app using NEFT RTGS or IMPS. You need to add beneficiary details first.,money_transfer
+What is the FD interest rate,Our Fixed Deposit interest rates range from 5.5% to 7.2% depending on the tenure and amount. Senior citizens get additional 0.5% interest.,fd_rates
+I want to close my account,To close your account please visit our branch with your passbook debit card and ID proof. Clear all pending dues before account closure.,account_closure
+How do I activate internet banking,You can activate internet banking by visiting our branch or through our mobile app. You will need your account number and registered mobile number.,internet_banking
+What documents are needed for loan,For loans you need income proof ID proof address proof bank statements and property documents for secured loans.,loan_documents
+How do I report fraudulent transaction,Report fraudulent transactions immediately by calling our fraud helpline. We will investigate and reverse unauthorized transactions if verified.,fraud_report
+What are the charges for ATM withdrawal,ATM withdrawals are free for first 5 transactions per month. Beyond that Rs.20 is charged for same bank ATMs and Rs.25 for other bank ATMs.,atm_charges
+How can I get a loan statement,You can download loan statements from internet banking mobile app or request them at our branch. Email delivery is also available.,loan_statement
+What is the process for home loan,For home loans submit application with documents. After verification and property evaluation we will approve and disburse the loan amount.,home_loan
+How do I change my mobile number,To change your registered mobile number visit our branch with ID proof and fill the mobile number change form.,mobile_update
+What are the tax benefits on FD,Fixed Deposits under Rs.1.5 lakhs qualify for tax deduction under Section 80C. Tax is deducted on interest earned above Rs.10000.,tax_benefits
+How do I get a duplicate passbook,For duplicate passbook visit our branch with ID proof and pay the applicable charges. New passbook will be issued immediately.,duplicate_passbook

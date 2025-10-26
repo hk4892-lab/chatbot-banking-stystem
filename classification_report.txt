@@ -1,0 +1,24 @@
+Multilingual Banking Chatbot - Classification Report
+=======================================================
+
+Training Accuracy: 1.000
+Test Accuracy: 0.000
+
+Detailed Classification Report:
+-----------------------------------
+                    precision    recall  f1-score   support
+
+      account_info       0.00      0.00      0.00       0.0
+       branch_info       0.00      0.00      0.00       1.0
+       credit_card       0.00      0.00      0.00       2.0
+duplicate_passbook       0.00      0.00      0.00       2.0
+         home_loan       0.00      0.00      0.00       1.0
+        kyc_update       0.00      0.00      0.00       1.0
+    loan_documents       0.00      0.00      0.00       1.0
+      loan_inquiry       0.00      0.00      0.00       0.0
+    loan_statement       0.00      0.00      0.00       1.0
+     mobile_update       0.00      0.00      0.00       1.0
+
+          accuracy                           0.00      10.0
+         macro avg       0.00      0.00      0.00      10.0
+      weighted avg       0.00      0.00      0.00      10.0
