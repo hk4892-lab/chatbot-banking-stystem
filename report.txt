@@ -1,0 +1,25 @@
+================================================================================
+MULTILINGUAL BANKING CHATBOT - CLASSIFICATION REPORT
+================================================================================
+
+Train Accuracy: 0.8431 (84.31%)
+Test Accuracy:  0.6154 (61.54%)
+
+--------------------------------------------------------------------------------
+CLASSIFICATION REPORT (Test Set)
+--------------------------------------------------------------------------------
+                    precision    recall  f1-score   support
+
+   account_opening       0.33      0.50      0.40         2
+   balance_inquiry       1.00      1.00      1.00         1
+     card_services       0.50      1.00      0.67         2
+     fund_transfer       0.00      0.00      0.00         1
+    interest_rates       1.00      1.00      1.00         1
+        kyc_update       1.00      0.50      0.67         2
+      loan_inquiry       0.67      1.00      0.80         2
+    password_reset       0.00      0.00      0.00         1
+transaction_issues       0.00      0.00      0.00         1
+
+          accuracy                           0.62        13
+         macro avg       0.50      0.56      0.50        13
+      weighted avg       0.54      0.62      0.54        13

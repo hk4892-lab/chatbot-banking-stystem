@@ -1,0 +1,33 @@
+user,bot,intent
+"How do I open a new savings account?","Visit the nearest branch with ID proof and address proof. You can also apply online through our website.",account_opening
+"I want to open a bank account","Please bring your ID, proof of address and initial deposit to any branch. Our staff will guide you through the process.",account_opening
+"What documents do I need to open an account?","You need valid ID proof (Aadhaar/PAN), address proof, and recent photographs.",account_opening
+"Can I open an account online?","Yes! Visit our website and click on 'Open Account Online'. Complete the video KYC process.",account_opening
+"How to check my account balance?","You can check balance via SMS by sending BAL to 567890 or use our mobile app or internet banking.",balance_inquiry
+"What is my current balance?","Login to internet banking or mobile app to view your balance. You can also call our helpline.",balance_inquiry
+"How do I know my account balance?","Send SMS 'BAL' to 567890 or check through ATM or mobile banking app.",balance_inquiry
+"I lost my debit card","Please call our 24/7 helpline immediately at 1800-XXX-XXXX to block your card. Visit branch for replacement.",card_services
+"My credit card is stolen","Report it immediately on our helpline. We will block the card and issue a new one within 5-7 business days.",card_services
+"How to activate my new card?","Call our helpline or use the mobile app. You will need to set your PIN at any ATM.",card_services
+"Card not working at ATM","Check if your card is damaged or blocked. Try another ATM. Contact helpline if issue persists.",card_services
+"How can I apply for a personal loan?","Visit our website or branch. You need salary slips for last 3 months and ID proof. Processing takes 2-3 days.",loan_inquiry
+"What is the interest rate for home loan?","Current home loan rates start from 8.5% per annum. Rates vary based on loan amount and tenure.",loan_inquiry
+"Check my loan status","Login to internet banking and check 'Loan' section. Or visit the branch where you applied.",loan_inquiry
+"When will my loan be approved?","Loan approval takes 3-5 business days after document verification. You will receive SMS and email updates.",loan_inquiry
+"How to update my KYC details?","Visit any branch with updated documents or use video KYC facility through our mobile app.",kyc_update
+"I changed my address how to update?","Submit address proof at branch or update through internet banking. Some changes require branch visit.",kyc_update
+"Update my phone number in account","Visit branch with ID proof and submit phone number change request form. Update is done within 24 hours.",kyc_update
+"What are the FD interest rates?","Fixed deposit rates vary from 5.5% to 7.5% depending on tenure. Senior citizens get 0.5% extra interest.",interest_rates
+"Savings account interest rate?","Current savings account interest rate is 3.5% per annum calculated quarterly.",interest_rates
+"How much interest on deposits?","It depends on type and tenure. FD: 5.5-7.5%, Savings: 3.5%, Recurring: 6.0%.",interest_rates
+"I want to close my account","Visit the branch with your account number and ID proof. Clear all dues and submit account closure form.",account_closure
+"How to transfer money online?","Login to internet banking or app. Add beneficiary and wait for activation. Then transfer using NEFT/RTGS/IMPS.",fund_transfer
+"Send money to another bank","Use NEFT/RTGS/IMPS through internet banking. Add beneficiary first with account number and IFSC code.",fund_transfer
+"Transaction failed but amount deducted","Don't worry. If transaction failed amount will be auto-reversed within 3-5 business days. Contact helpline if not.",transaction_issues
+"My ATM withdrawal failed","Check if amount was debited. If yes and cash not received report immediately at branch with transaction slip.",transaction_issues
+"How to generate ATM PIN?","Visit ATM and select 'PIN Generation' option or use our mobile app. You need registered mobile number.",atm_services
+"Forgot my internet banking password","Click 'Forgot Password' on login page. Verify with OTP and create new password. Or visit branch for reset.",password_reset
+"Cannot login to mobile app","Check your internet connection. Ensure you are using correct credentials. Try 'Forgot Password' option.",password_reset
+"What is minimum balance requirement?","Minimum balance: Urban-Rs.5000 Metro-Rs.10000 Rural-Rs.2000. Charges apply if balance falls below.",account_inquiry
+"Any charges for SMS alerts?","Basic SMS alerts are free. Detailed transaction alerts may have nominal monthly charges of Rs.25.",service_charges
+"How to link Aadhaar with account?","Visit branch with Aadhaar card or link online through internet banking or mobile app.",kyc_update

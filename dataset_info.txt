@@ -1,0 +1,42 @@
+================================================================================
+MULTILINGUAL BANKING CHATBOT - DATASET INFORMATION
+================================================================================
+
+Total Records: 64
+English Records: 32
+Tamil Records: 32
+Unique Intents: 13
+
+Intent Categories:
+  - account_closure: 2 records
+  - account_inquiry: 2 records
+  - account_opening: 8 records
+  - atm_services: 2 records
+  - balance_inquiry: 6 records
+  - card_services: 8 records
+  - fund_transfer: 4 records
+  - interest_rates: 6 records
+  - kyc_update: 8 records
+  - loan_inquiry: 8 records
+  - password_reset: 4 records
+  - service_charges: 2 records
+  - transaction_issues: 4 records
+
+================================================================================
+INTENT DISTRIBUTION
+================================================================================
+intent
+account_opening       8
+card_services         8
+loan_inquiry          8
+kyc_update            8
+balance_inquiry       6
+interest_rates        6
+fund_transfer         4
+transaction_issues    4
+password_reset        4
+account_closure       2
+atm_services          2
+account_inquiry       2
+service_charges       2
+Name: count, dtype: int64
