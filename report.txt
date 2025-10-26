@@ -1,0 +1,20 @@
+Report for Multilingual Banking Chatbot
+Data source: DEMO DATASET (files missing)
+
+Summary Metrics (macro/weighted):
+Accuracy: 0.0000
+Precision (macro): 0.0000 | (weighted): 0.0000
+Recall (macro): 0.0000 | (weighted): 0.0000
+F1 (macro): 0.0000 | (weighted): 0.0000
+
+                precision    recall  f1-score   support
+
+       fd_rate       0.00      0.00      0.00       1.0
+   loan_status       0.00      0.00      0.00       0.0
+  open_account       0.00      0.00      0.00       1.0
+reset_password       0.00      0.00      0.00       0.0
+    update_kyc       0.00      0.00      0.00       1.0
+
+      accuracy                           0.00       3.0
+     macro avg       0.00      0.00      0.00       3.0
+  weighted avg       0.00      0.00      0.00       3.0
