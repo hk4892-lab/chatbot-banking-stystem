@@ -1,0 +1,26 @@
+user,bot,intent
+I want to open a new account,You can open a new account by visiting our nearest branch with valid ID proof and address proof. Our team will guide you through the process.,account_opening
+How can I create a bank account,"To create a bank account, please bring your ID, address proof, and initial deposit to any of our branches.",account_opening
+What do I need to open a savings account,"For opening a savings account, you need valid identification, address verification, and minimum deposit amount.",account_opening
+I would like to start banking with you,We welcome you to start banking with us. Visit our branch with required documents to open your account.,account_opening
+Can you help me open an account,Certainly! We can help you open an account. Please visit our branch with necessary documents.,account_opening
+How do I check my account balance,"You can check your account balance through our mobile app, internet banking, or by visiting an ATM.",balance_inquiry
+What is my current balance,You can view your current balance through our digital banking services or ATM machines.,balance_inquiry
+How to see my account balance,"Your account balance is available 24/7 through our mobile app, online banking, or ATM network.",balance_inquiry
+Can I check my balance online,"Yes, you can check your balance online through our internet banking portal or mobile application.",balance_inquiry
+Where can I see my account balance,"You can see your account balance through multiple channels: mobile app, internet banking, ATM, or branch visit.",balance_inquiry
+I lost my debit card,Please report your lost debit card immediately by calling our 24/7 helpline. We will block your card and issue a new one.,card_services
+My credit card is stolen,Report your stolen credit card immediately. We will block it and issue a replacement within 3-5 business days.,card_services
+I need to block my card,You can block your card instantly by calling our customer service or using our mobile app.,card_services
+My ATM card is not working,"If your ATM card is not working, please visit our branch or call customer service for assistance.",card_services
+How to replace my damaged card,"For a damaged card replacement, visit our branch with ID proof and we will issue a new card.",card_services
+What are the loan interest rates,Our loan interest rates vary by type. Personal loans start from 10.5% and home loans from 8.5%.,loan_inquiry
+I want to apply for a personal loan,You can apply for a personal loan online or at our branch with income and identity documents.,loan_inquiry
+What is the home loan rate,Our home loan rates start from 8.5% and vary based on loan amount and tenure.,loan_inquiry
+How much loan can I get,"Your loan eligibility depends on your income, credit score, and repayment capacity.",loan_inquiry
+What are the loan requirements,"Loan requirements include income proof, identity documents, and good credit history.",loan_inquiry
+How can I update my KYC details,You can update your KYC details by visiting our branch with updated documents or through our online portal.,kyc_update
+I need to update my address,"To update your address, visit our branch with address proof or use our digital KYC update service.",kyc_update
+How to change my phone number,You can change your registered phone number by visiting our branch with ID proof.,kyc_update
+Update my personal information,Personal information can be updated at our branch or through our secure online portal.,kyc_update
+I want to update my documents,Document updates can be done by visiting our branch or uploading through our digital platform.,kyc_update

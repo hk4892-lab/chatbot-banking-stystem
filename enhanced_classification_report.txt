@@ -1,0 +1,29 @@
+Enhanced Multilingual Banking Chatbot - Classification Report
+=================================================================
+
+Dataset Information:
+- Total samples: 50
+- Training samples: 35
+- Test samples: 15
+- Unique intents: 5
+
+Model Performance:
+- Training Accuracy: 1.000
+- Test Accuracy: 0.800
+- Macro Precision: 0.850
+- Macro Recall: 0.800
+- Macro F1-Score: 0.806
+
+Detailed Classification Report:
+----------------------------------------
+                 precision    recall  f1-score   support
+
+account_opening       1.00      0.67      0.80         3
+balance_inquiry       0.75      1.00      0.86         3
+  card_services       1.00      0.67      0.80         3
+     kyc_update       0.50      0.67      0.57         3
+   loan_inquiry       1.00      1.00      1.00         3
+
+       accuracy                           0.80        15
+      macro avg       0.85      0.80      0.81        15
+   weighted avg       0.85      0.80      0.81        15
