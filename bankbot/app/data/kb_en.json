@@ -1,0 +1,62 @@
+[
+  {
+    "id": "kb_en_01",
+    "title": "Savings Account MAB",
+    "content": "Maintain the monthly average balance (MAB) by keeping your daily closing balance above the threshold. Falling short can trigger a service fee.",
+    "tags": ["savings", "mab", "fees"]
+  },
+  {
+    "id": "kb_en_02",
+    "title": "Debit Card Blocking",
+    "content": "You can block a lost or stolen debit card instantly via mobile banking or the helpline. A digital replacement card is issued in minutes.",
+    "tags": ["debit card", "security", "block card"]
+  },
+  {
+    "id": "kb_en_03",
+    "title": "UPI Daily Limits",
+    "content": "UPI payments are capped at INR 1 lakh per day for most customers. Merchants may set lower limits for security. Common queries include phrases like 'limit kitna hai' or 'UPI limit kitna'.",
+    "tags": ["upi", "limits"]
+  },
+  {
+    "id": "kb_en_04",
+    "title": "EMI Formula",
+    "content": "EMI is calculated using P*r*(1+r)^n divided by ((1+r)^n - 1) where P is principal, r is monthly rate, and n is tenure in months.",
+    "tags": ["emi", "loans"]
+  },
+  {
+    "id": "kb_en_05",
+    "title": "NEFT Timings",
+    "content": "NEFT transfers run 24x7 in half-hour batches. Credits may take up to 2 hours depending on the beneficiary bank.",
+    "tags": ["neft", "payments"]
+  },
+  {
+    "id": "kb_en_06",
+    "title": "KYC Update",
+    "content": "Update KYC every two years with proof of identity and address. Use the mobile app to upload scans or visit any branch.",
+    "tags": ["kyc", "compliance"]
+  },
+  {
+    "id": "kb_en_07",
+    "title": "FD Interest Payout",
+    "content": "Fixed deposits offer monthly, quarterly, or cumulative payout. Premature closure attracts a 1% lower rate.",
+    "tags": ["fd", "interest"]
+  },
+  {
+    "id": "kb_en_08",
+    "title": "Credit Card Billing Cycle",
+    "content": "Your credit card billing cycle lasts 30 days with a 20-day grace period. Pay the total due to avoid interest.",
+    "tags": ["credit card", "billing"]
+  },
+  {
+    "id": "kb_en_09",
+    "title": "Statement Request",
+    "content": "Download statements for the last 24 months from internet banking. Older copies can be emailed on request.",
+    "tags": ["statement", "documents"]
+  },
+  {
+    "id": "kb_en_10",
+    "title": "Two-Factor Authentication",
+    "content": "Online transactions require two-factor authentication via OTP or device binding for enhanced security.",
+    "tags": ["2fa", "security"]
+  }
+]
