@@ -1,0 +1,1 @@
+"""BankBot FastAPI application package."""

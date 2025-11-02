@@ -1,0 +1,62 @@
+[
+  {
+    "id": "kb_en_001",
+    "title": "Savings Account Minimum Balance",
+    "content": "Maintain the stated minimum average balance (MAB) each month to avoid service fees. SMS alerts are sent when balance drops near the threshold.",
+    "tags": ["savings", "mab", "account"]
+  },
+  {
+    "id": "kb_en_002",
+    "title": "Debit Card Blocking",
+    "content": "Lost or stolen debit cards can be blocked instantly via mobile banking, IVR, or by contacting support with identity verification.",
+    "tags": ["card", "security"]
+  },
+  {
+    "id": "kb_en_003",
+    "title": "UPI Transaction Limits",
+    "content": "Unified Payments Interface supports up to ?1 lakh per day for most banks with a maximum of 10 transfers in 24 hours.",
+    "tags": ["upi", "limit"]
+  },
+  {
+    "id": "kb_en_004",
+    "title": "EMI Calculation Guidance",
+    "content": "EMI equals principal times monthly rate times (1+r)^n divided by ((1+r)^n - 1). Use the EMI calculator tool for precise values.",
+    "tags": ["emi", "loan"]
+  },
+  {
+    "id": "kb_en_005",
+    "title": "NEFT Transfer Timings",
+    "content": "NEFT transfers run 24x7 in half-hourly batches. Credit time may be up to 30 minutes depending on destination bank.",
+    "tags": ["neft", "transfer"]
+  },
+  {
+    "id": "kb_en_006",
+    "title": "KYC Update Process",
+    "content": "Submit officially valid documents and a recent photo via branch, online upload, or video KYC to refresh your profile details.",
+    "tags": ["kyc", "profile"]
+  },
+  {
+    "id": "kb_en_007",
+    "title": "Fixed Deposit Interest Payout",
+    "content": "Fixed deposits offer monthly, quarterly, or payout-on-maturity interest options. Senior citizens receive an additional 0.5% p.a.",
+    "tags": ["fd", "interest"]
+  },
+  {
+    "id": "kb_en_008",
+    "title": "Credit Card Billing Cycle",
+    "content": "Billing cycles typically run for 30 days with a 15-20 day grace period. Pay before the due date to avoid finance charges.",
+    "tags": ["credit card", "billing"]
+  },
+  {
+    "id": "kb_en_009",
+    "title": "Account Statement Request",
+    "content": "Download statements from internet banking or request email delivery. Printed statements can be mailed on demand.",
+    "tags": ["statement", "records"]
+  },
+  {
+    "id": "kb_en_010",
+    "title": "Two Factor Authentication",
+    "content": "Online banking requires OTP-based second factor. Never share OTPs with anyone, including bank staff.",
+    "tags": ["security", "otp"]
+  }
+]
