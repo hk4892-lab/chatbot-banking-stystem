@@ -1,0 +1,14 @@
+[
+  {"q": "How can I check my savings account balance?", "a": "You can view your real-time balance in the mobile app dashboard or dial the missed-call balance service from your registered mobile number.", "intent": "balance_inquiry", "lang": "en"},
+  {"q": "What is the limit for instant fund transfers?", "a": "Instant transfers via IMPS allow up to ₹5 lakh per day when initiated through Internet Banking with OTP confirmation.", "intent": "fund_transfer", "lang": "en"},
+  {"q": "How do I block my lost debit card?", "a": "Open the mobile app > Cards > Manage Card and choose Block Card, or call the 24x7 emergency helpline immediately.", "intent": "card_services", "lang": "en"},
+  {"q": "Can I request a new debit card PIN online?", "a": "Yes, use the Generate PIN option under Card Services in Internet Banking and authenticate with your OTP.", "intent": "card_services", "lang": "en"},
+  {"q": "How do I change the EMI date for my loan?", "a": "Submit an EMI reschedule request through the loan dashboard at least 7 working days before the current due date.", "intent": "loan_services", "lang": "en"},
+  {"q": "What is the current personal loan interest rate?", "a": "Personal loans presently start at 12.5% per annum, with final rates based on credit profile and tenure.", "intent": "loan_services", "lang": "en"},
+  {"q": "How do I download my bank statement?", "a": "Navigate to Accounts > Download Statement in Internet Banking and export a PDF or Excel file for the selected period.", "intent": "digital_banking", "lang": "en"},
+  {"q": "How can I update my communication address?", "a": "Visit Profile > Contact Details in the app, upload a valid address proof, and confirm with OTP to update instantly.", "intent": "service_request", "lang": "en"},
+  {"q": "How do I enable international transactions on my card?", "a": "Enable International Usage from Card Controls in the app, set your preferred limits, and confirm with OTP before travel.", "intent": "card_services", "lang": "en"},
+  {"q": "What are the customer care working hours?", "a": "Our phone banking officers are available 8 AM to 8 PM on weekdays, while digital self-service channels run 24x7.", "intent": "general_info", "lang": "en"},
+  {"q": "How do I pay off my home loan early?", "a": "You can raise a part-prepayment request under Loan Services, choose the debit account, and authorize the transaction with OTP.", "intent": "loan_services", "lang": "en"},
+  {"q": "Is there a fee for UPI payments?", "a": "There is no fee for UPI payments up to ₹1 lakh per transaction for retail customers.", "intent": "digital_banking", "lang": "en"}
+]

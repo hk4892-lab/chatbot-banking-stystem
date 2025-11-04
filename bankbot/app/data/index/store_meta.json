@@ -1,0 +1,189 @@
+{
+  "passages": [
+    "How can I check my savings account balance? You can view your real-time balance in the mobile app dashboard or dial the missed-call balance service from your registered mobile number.",
+    "What is the limit for instant fund transfers? Instant transfers via IMPS allow up to ₹5 lakh per day when initiated through Internet Banking with OTP confirmation.",
+    "How do I block my lost debit card? Open the mobile app > Cards > Manage Card and choose Block Card, or call the 24x7 emergency helpline immediately.",
+    "Can I request a new debit card PIN online? Yes, use the Generate PIN option under Card Services in Internet Banking and authenticate with your OTP.",
+    "How do I change the EMI date for my loan? Submit an EMI reschedule request through the loan dashboard at least 7 working days before the current due date.",
+    "What is the current personal loan interest rate? Personal loans presently start at 12.5% per annum, with final rates based on credit profile and tenure.",
+    "How do I download my bank statement? Navigate to Accounts > Download Statement in Internet Banking and export a PDF or Excel file for the selected period.",
+    "How can I update my communication address? Visit Profile > Contact Details in the app, upload a valid address proof, and confirm with OTP to update instantly.",
+    "How do I enable international transactions on my card? Enable International Usage from Card Controls in the app, set your preferred limits, and confirm with OTP before travel.",
+    "What are the customer care working hours? Our phone banking officers are available 8 AM to 8 PM on weekdays, while digital self-service channels run 24x7.",
+    "How do I pay off my home loan early? You can raise a part-prepayment request under Loan Services, choose the debit account, and authorize the transaction with OTP.",
+    "Is there a fee for UPI payments? There is no fee for UPI payments up to ₹1 lakh per transaction for retail customers.",
+    "सेविंग्स खाते का बैलेंस कैसे देखें? मोबाइल ऐप में लॉगिन करें और होम स्क्रीन पर बैलेंस देखें या मिस्ड कॉल सेवा का उपयोग करें।",
+    "फंड ट्रांसफर की रोज़ाना सीमा क्या है? आईएमपीएस के माध्यम से इंटरनेट बैंकिंग से प्रतिदिन ₹5 लाख तक स्थानांतरण संभव है।",
+    "डेबिट कार्ड खो जाए तो कैसे ब्लॉक करें? मोबाइल ऐप में कार्ड प्रबंधन अनुभाग से तुरंत कार्ड ब्लॉक करें या 24x7 हेल्पलाइन पर कॉल करें।",
+    "क्या मैं नया एटीएम पिन ऑनलाइन बना सकता हूँ? हाँ, इंटरनेट बैंकिंग में कार्ड सर्विसेज़ सेक्शन में Generate PIN विकल्प चुनें और ओटीपी से पुष्टि करें।",
+    "मेरा ईएमआई भुगतान दिनांक कैसे बदलें? लोन सर्विसेज़ में जाकर अगली देय तिथि से कम से कम 7 दिन पहले ईएमआई रीशेड्यूल अनुरोध दर्ज करें।",
+    "व्यक्तिगत ऋण का वर्तमान ब्याज कितना है? व्यक्तिगत ऋण 12.5% वार्षिक ब्याज से प्रारंभ होते हैं और दर आपकी प्रोफाइल पर निर्भर करती है।",
+    "खाता स्टेटमेंट कैसे डाउनलोड करें? इंटरनेट बैंकिंग में Accounts > Download Statement चुनें और पीडीएफ या एक्सेल फ़ाइल प्राप्त करें।",
+    "சேமிப்பு கணக்கு இருப்பை எப்படி பார்க்கலாம்? மொபைல் செயலியின் முகப்பு திரையில் உடனடி இருப்பு காணலாம் அல்லது பதிவு செய்த எண்ணில் மிஸ்ட்கால் விடலாம்.",
+    "திடீர் நிதி மாற்றத்தின் வரம்பு என்ன? இணைய வங்கியில் IMPS வழியாக ஒரு நாளுக்கு ₹5 இலட்சம் வரை OTP மூலம் அனுப்பலாம்.",
+    "டெபிட் கார்டை இழந்தால் எப்படி தடுப்பது? அப்பில் கார்டு மேலாண்மைக்கு சென்று 'கார்டை முடக்கு' என்பதைத் தேர்ந்தெடுக்கவும் அல்லது 24x7 உதவி எண்ணுக்கு அழைக்கவும்.",
+    "புதிய கார்டு PIN ஐ ஆன்லைனில் பெறலாமா? ஆமாம், இணைய வங்கியின் கார்டு சேவைகள் பகுதியில் PIN உருவாக்க பொத்தானை பயன்படுத்தவும்.",
+    "என் கடன் EMI தேதியை மாற்ற முடியுமா? கடன் சேவைகள் பகுதியில் 7 வேலை நாட்களுக்கு முன் EMI reschedule கோரிக்கை சமர்ப்பிக்க வேண்டும்.",
+    "வட்டி விகித தகவலை எப்படி பெறலாம்? அப்பில் Loan Rates பகுதியில் தற்போதைய தனிநபர் கடன் வட்டி 12.5% முதல் ஆரம்பிப்பதை பார்க்கலாம்.",
+    "கணக்கு அறிக்கையை எப்படி பதிவிறக்கம் செய்வது? இணைய வங்கியில் கணக்கு > அறிக்கை பதிவிறக்கம் என்பதை தேர்ந்தெடுத்து PDF அல்லது Excel வடிவில் சேமிக்கலாம்."
+  ],
+  "metas": [
+    {
+      "intent": "balance_inquiry",
+      "lang": "en",
+      "answer": "You can view your real-time balance in the mobile app dashboard or dial the missed-call balance service from your registered mobile number.",
+      "question": "How can I check my savings account balance?"
+    },
+    {
+      "intent": "fund_transfer",
+      "lang": "en",
+      "answer": "Instant transfers via IMPS allow up to ₹5 lakh per day when initiated through Internet Banking with OTP confirmation.",
+      "question": "What is the limit for instant fund transfers?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "en",
+      "answer": "Open the mobile app > Cards > Manage Card and choose Block Card, or call the 24x7 emergency helpline immediately.",
+      "question": "How do I block my lost debit card?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "en",
+      "answer": "Yes, use the Generate PIN option under Card Services in Internet Banking and authenticate with your OTP.",
+      "question": "Can I request a new debit card PIN online?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "en",
+      "answer": "Submit an EMI reschedule request through the loan dashboard at least 7 working days before the current due date.",
+      "question": "How do I change the EMI date for my loan?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "en",
+      "answer": "Personal loans presently start at 12.5% per annum, with final rates based on credit profile and tenure.",
+      "question": "What is the current personal loan interest rate?"
+    },
+    {
+      "intent": "digital_banking",
+      "lang": "en",
+      "answer": "Navigate to Accounts > Download Statement in Internet Banking and export a PDF or Excel file for the selected period.",
+      "question": "How do I download my bank statement?"
+    },
+    {
+      "intent": "service_request",
+      "lang": "en",
+      "answer": "Visit Profile > Contact Details in the app, upload a valid address proof, and confirm with OTP to update instantly.",
+      "question": "How can I update my communication address?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "en",
+      "answer": "Enable International Usage from Card Controls in the app, set your preferred limits, and confirm with OTP before travel.",
+      "question": "How do I enable international transactions on my card?"
+    },
+    {
+      "intent": "general_info",
+      "lang": "en",
+      "answer": "Our phone banking officers are available 8 AM to 8 PM on weekdays, while digital self-service channels run 24x7.",
+      "question": "What are the customer care working hours?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "en",
+      "answer": "You can raise a part-prepayment request under Loan Services, choose the debit account, and authorize the transaction with OTP.",
+      "question": "How do I pay off my home loan early?"
+    },
+    {
+      "intent": "digital_banking",
+      "lang": "en",
+      "answer": "There is no fee for UPI payments up to ₹1 lakh per transaction for retail customers.",
+      "question": "Is there a fee for UPI payments?"
+    },
+    {
+      "intent": "balance_inquiry",
+      "lang": "hi",
+      "answer": "मोबाइल ऐप में लॉगिन करें और होम स्क्रीन पर बैलेंस देखें या मिस्ड कॉल सेवा का उपयोग करें।",
+      "question": "सेविंग्स खाते का बैलेंस कैसे देखें?"
+    },
+    {
+      "intent": "fund_transfer",
+      "lang": "hi",
+      "answer": "आईएमपीएस के माध्यम से इंटरनेट बैंकिंग से प्रतिदिन ₹5 लाख तक स्थानांतरण संभव है।",
+      "question": "फंड ट्रांसफर की रोज़ाना सीमा क्या है?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "hi",
+      "answer": "मोबाइल ऐप में कार्ड प्रबंधन अनुभाग से तुरंत कार्ड ब्लॉक करें या 24x7 हेल्पलाइन पर कॉल करें।",
+      "question": "डेबिट कार्ड खो जाए तो कैसे ब्लॉक करें?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "hi",
+      "answer": "हाँ, इंटरनेट बैंकिंग में कार्ड सर्विसेज़ सेक्शन में Generate PIN विकल्प चुनें और ओटीपी से पुष्टि करें।",
+      "question": "क्या मैं नया एटीएम पिन ऑनलाइन बना सकता हूँ?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "hi",
+      "answer": "लोन सर्विसेज़ में जाकर अगली देय तिथि से कम से कम 7 दिन पहले ईएमआई रीशेड्यूल अनुरोध दर्ज करें।",
+      "question": "मेरा ईएमआई भुगतान दिनांक कैसे बदलें?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "hi",
+      "answer": "व्यक्तिगत ऋण 12.5% वार्षिक ब्याज से प्रारंभ होते हैं और दर आपकी प्रोफाइल पर निर्भर करती है।",
+      "question": "व्यक्तिगत ऋण का वर्तमान ब्याज कितना है?"
+    },
+    {
+      "intent": "digital_banking",
+      "lang": "hi",
+      "answer": "इंटरनेट बैंकिंग में Accounts > Download Statement चुनें और पीडीएफ या एक्सेल फ़ाइल प्राप्त करें।",
+      "question": "खाता स्टेटमेंट कैसे डाउनलोड करें?"
+    },
+    {
+      "intent": "balance_inquiry",
+      "lang": "ta",
+      "answer": "மொபைல் செயலியின் முகப்பு திரையில் உடனடி இருப்பு காணலாம் அல்லது பதிவு செய்த எண்ணில் மிஸ்ட்கால் விடலாம்.",
+      "question": "சேமிப்பு கணக்கு இருப்பை எப்படி பார்க்கலாம்?"
+    },
+    {
+      "intent": "fund_transfer",
+      "lang": "ta",
+      "answer": "இணைய வங்கியில் IMPS வழியாக ஒரு நாளுக்கு ₹5 இலட்சம் வரை OTP மூலம் அனுப்பலாம்.",
+      "question": "திடீர் நிதி மாற்றத்தின் வரம்பு என்ன?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "ta",
+      "answer": "அப்பில் கார்டு மேலாண்மைக்கு சென்று 'கார்டை முடக்கு' என்பதைத் தேர்ந்தெடுக்கவும் அல்லது 24x7 உதவி எண்ணுக்கு அழைக்கவும்.",
+      "question": "டெபிட் கார்டை இழந்தால் எப்படி தடுப்பது?"
+    },
+    {
+      "intent": "card_services",
+      "lang": "ta",
+      "answer": "ஆமாம், இணைய வங்கியின் கார்டு சேவைகள் பகுதியில் PIN உருவாக்க பொத்தானை பயன்படுத்தவும்.",
+      "question": "புதிய கார்டு PIN ஐ ஆன்லைனில் பெறலாமா?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "ta",
+      "answer": "கடன் சேவைகள் பகுதியில் 7 வேலை நாட்களுக்கு முன் EMI reschedule கோரிக்கை சமர்ப்பிக்க வேண்டும்.",
+      "question": "என் கடன் EMI தேதியை மாற்ற முடியுமா?"
+    },
+    {
+      "intent": "loan_services",
+      "lang": "ta",
+      "answer": "அப்பில் Loan Rates பகுதியில் தற்போதைய தனிநபர் கடன் வட்டி 12.5% முதல் ஆரம்பிப்பதை பார்க்கலாம்.",
+      "question": "வட்டி விகித தகவலை எப்படி பெறலாம்?"
+    },
+    {
+      "intent": "digital_banking",
+      "lang": "ta",
+      "answer": "இணைய வங்கியில் கணக்கு > அறிக்கை பதிவிறக்கம் என்பதை தேர்ந்தெடுத்து PDF அல்லது Excel வடிவில் சேமிக்கலாம்.",
+      "question": "கணக்கு அறிக்கையை எப்படி பதிவிறக்கம் செய்வது?"
+    }
+  ],
+  "use_faiss": true
+}
