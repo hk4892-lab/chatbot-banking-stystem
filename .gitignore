@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated files
+index/*.faiss
+index/*.pkl
+out/
+logs/
+*.log
+
+# Models cache
+.cache/
+models/
+.transformers/
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db

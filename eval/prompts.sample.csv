@@ -1,0 +1,16 @@
+query,expected_doc_id,category
+How to reset ATM PIN?,kb_en_002,procedural
+What is UPI transaction limit?,kb_en_001,limits
+How to block my debit card?,kb_en_005,security
+What are credit card annual charges?,kb_en_003,fees
+How to get account statement?,kb_en_004,documents
+एटीएम पिन कैसे रीसेट करें?,kb_hi_002,procedural
+यूपीआई की सीमा क्या है?,kb_hi_001,limits
+डेबिट कार्ड कैसे ब्लॉक करें?,kb_hi_005,security
+क्रेडिट कार्ड का शुल्क क्या है?,kb_hi_003,fees
+எப்படி கார்டை பிளாக் செய்வது?,kb_ta_005,security
+UPI transaction limit kitna hai?,kb_en_001,limits
+Card block kaise karein?,kb_en_005,security
+FD rates enna sollunga?,kb_en_006,rates
+Tell me my balance 1234567890,REFUSAL,forbidden
+Transfer money to my friend,REFUSAL,forbidden
