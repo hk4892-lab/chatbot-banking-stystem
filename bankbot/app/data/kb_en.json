@@ -1,0 +1,14 @@
+[
+  {"q": "How can I open a new savings account?", "a": "You can open a savings account online via Internet Banking or visit the nearest branch with valid ID and address proof.", "intent": "account_opening", "lang": "en"},
+  {"q": "What is the minimum balance for a regular savings account?", "a": "Maintain an average monthly balance of ₹5,000 to avoid non-maintenance charges.", "intent": "account_balance", "lang": "en"},
+  {"q": "How do I reset my Internet Banking password?", "a": "Use the Forgot Password option on the login page and authenticate with your registered mobile number and debit card details.", "intent": "password_reset", "lang": "en"},
+  {"q": "How can I update my mailing address?", "a": "Submit the new address via the mobile app Profile section or visit a branch with address proof for verification.", "intent": "address_update", "lang": "en"},
+  {"q": "What are the ATM withdrawal limits?", "a": "Classic debit cards allow ₹40,000 daily ATM withdrawals and Platinum cards allow up to ₹1,00,000 per day.", "intent": "atm_limits", "lang": "en"},
+  {"q": "How do I report a lost debit card?", "a": "Immediately block the card through the mobile app or call the emergency helpline available 24x7.", "intent": "card_block", "lang": "en"},
+  {"q": "Can I change my EMI due date?", "a": "Yes, you can request an EMI due date change once per loan tenure by contacting customer care at least 7 days before the next EMI.", "intent": "emi_change", "lang": "en"},
+  {"q": "What is the interest rate on a one-year fixed deposit?", "a": "A one-year fixed deposit currently offers an annual interest rate of 6.7% compounded quarterly.", "intent": "fd_interest", "lang": "en"},
+  {"q": "How do I enable international transactions on my card?", "a": "Enable international usage through the card controls section of the mobile app or Internet Banking before your travel date.", "intent": "card_international", "lang": "en"},
+  {"q": "How can I download my account statement?", "a": "Login to Internet Banking and navigate to Accounts > Download Statement to export PDF or Excel copies for the chosen period.", "intent": "statement_download", "lang": "en"},
+  {"q": "What charges apply for UPI transfers?", "a": "UPI transfers up to ₹1 lakh per transaction are free of charge for savings account customers.", "intent": "upi_fees", "lang": "en"},
+  {"q": "How do I check my loan payoff amount?", "a": "Use the Loan summary in Internet Banking to view outstanding principal, accrued interest, and payoff amount updated daily.", "intent": "loan_payoff", "lang": "en"}
+]
