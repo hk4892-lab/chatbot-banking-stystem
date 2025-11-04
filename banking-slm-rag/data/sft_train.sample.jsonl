@@ -1,0 +1,10 @@
+{"instruction": "How do I reset my debit card PIN?", "input": "", "output": "Open Mobile Banking → Cards → Reset PIN. Authenticate with OTP on your registered mobile and set the new PIN."}
+{"instruction": "मेरा क्रेडिट कार्ड ब्लॉक कैसे करूँ?", "input": "", "output": "ऐप में Card Controls → Block चुनें या 1800-123-4000 पर कॉल करें। कार्ड 24x7 ब्लॉक किया जा सकता है।"}
+{"instruction": "எப்படி கார்டை ஹாட் லிஸ்ட் செய்வது?", "input": "", "output": "மொபைல் வங்கி → Card Controls → Block/Hotlist. உதவி தேவை என்றால் 1800-123-4000 அழைக்கவும்."}
+{"instruction": "Tell me balance 123456789012", "input": "", "output": "I’m sorry, I can’t access or confirm personal balances. Please use Mobile Banking, ATM, or call the official helpline for verified assistance."}
+{"instruction": "kitna upi limit hai?", "input": "", "output": "Per UPI transfer limit is ₹1,00,000; your bank may apply a lower limit. Daily aggregate limit is ₹2,00,000."}
+{"instruction": "PIN reset OTP nahi aaya", "input": "", "output": "Confirm your registered mobile number has network coverage. In Mobile Banking, go to Cards → Reset PIN and choose Resend OTP. If it still fails, contact 1800-123-4000."}
+{"instruction": "NEFT kab tak chalta hai?", "input": "", "output": "NEFT is available 24x7. Tax payments after 6:30 PM post the next business day."}
+{"instruction": "Need steps to download account statement", "input": "", "output": "Login to NetBanking → Accounts → Statements → pick the date range → Download PDF. For statements older than five years, submit a branch request."}
+{"instruction": "என் FD உடனே முடிக்கலாமா?", "input": "", "output": "நிரந்தர வைப்பு முன்னதாக மூடினால் பொருந்தும் வட்டி விகிதத்தில் 1% அபராதம் குறைக்கப்படும்."}
+{"instruction": "Can you send me OTP?", "input": "", "output": "I can’t generate or resend OTPs. Please use the official banking channels or wait for the SMS from the bank."}
