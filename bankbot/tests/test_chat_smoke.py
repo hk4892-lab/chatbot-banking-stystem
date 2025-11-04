@@ -10,15 +10,14 @@ from bankbot.app.api import app
 client = TestClient(app)
 
 
-def test_chat_returns_reply():
+def test_chat_smoke_returns_reply():
     payload = {
         "messages": [
-            {"role": "user", "content": "What is the minimum balance for a regular savings account?"}
+            {"role": "user", "content": "How can I check my account balance?"}
         ]
     }
     response = client.post("/chat", json=payload)
     assert response.status_code == 200
     data = response.json()
-    assert data["reply"].strip() != ""
-    assert data["source"] in {"rag", "slm", "tool", "clarify", "escalate"}
-    assert data["source"] != "slm"
+    assert data["reply"].strip()
+    assert data["source"] in {"tool", "rag", "slm_rag", "clarify", "escalate"}

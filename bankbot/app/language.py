@@ -1,4 +1,4 @@
-"""Language detection and normalization utilities."""
+"""Lightweight language utilities for BankBot."""
 
 from __future__ import annotations
 
@@ -8,15 +8,14 @@ import string
 
 _TAMIL_RANGE = re.compile(r"[\u0B80-\u0BFF]")
 _DEVANAGARI_RANGE = re.compile(r"[\u0900-\u097F]")
-_PUNCT_TABLE = str.maketrans({char: " " for char in string.punctuation})
+_PUNCT_TRANS = str.maketrans({ch: " " for ch in string.punctuation})
 
 
 def detect_language(text: str | None) -> str:
-    """Detect whether the text is Tamil, Hindi (Devanagari), or default to English."""
+    """Detect Tamil, Hindi, or default to English based on Unicode ranges."""
 
     if not text:
         return "en"
-
     if _TAMIL_RANGE.search(text):
         return "ta"
     if _DEVANAGARI_RANGE.search(text):
@@ -24,14 +23,14 @@ def detect_language(text: str | None) -> str:
     return "en"
 
 
-def normalize_text(text: str | None) -> str:
-    """Lowercase and strip punctuation for retrieval purposes."""
+def normalize(text: str | None) -> str:
+    """Normalize text for retrieval: lowercase, strip punctuation, collapse spaces."""
 
     if not text:
         return ""
-    lowered = text.lower().translate(_PUNCT_TABLE)
+    lowered = text.lower().translate(_PUNCT_TRANS)
     compact = re.sub(r"\s+", " ", lowered)
     return compact.strip()
 
 
-__all__ = ["detect_language", "normalize_text"]
+__all__ = ["detect_language", "normalize"]
