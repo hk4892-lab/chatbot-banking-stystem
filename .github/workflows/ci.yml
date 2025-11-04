@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Cache pip packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Lint with ruff
+      run: |
+        ruff check app/ ui/ index/ train/ eval/ tests/ || true
+    
+    - name: Type check with mypy
+      run: |
+        mypy app/ --ignore-missing-imports || true
+    
+    - name: Build test index
+      run: |
+        mkdir -p index logs
+        python index/build_index.py data/kb_chunks.sample.jsonl index/kb.faiss index/kb.meta.pkl
+    
+    - name: Run tests
+      run: |
+        pytest tests/ -v --tb=short
+    
+    - name: Test API startup
+      run: |
+        timeout 30s uvicorn app.api:app --host 0.0.0.0 --port 8000 &
+        sleep 10
+        curl -f http://localhost:8000/health || exit 1
+        curl -f http://localhost:8000/config || exit 1
+
+  docker:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Docker image
+      run: |
+        docker build -t banking-chatbot:test .
+    
+    - name: Test Docker image
+      run: |
+        docker run -d --name test-container -p 8000:8000 banking-chatbot:test
+        sleep 30
+        curl -f http://localhost:8000/health || exit 1
+        docker stop test-container

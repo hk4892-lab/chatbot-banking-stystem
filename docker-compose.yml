@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: banking-chatbot-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./index:/app/index
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+      - SLM_MODEL=microsoft/phi-3-mini-4k-instruct
+      - FAISS_INDEX_PATH=index/kb.faiss
+      - FAISS_META_PATH=index/kb.meta.pkl
+      - DEFAULT_K=5
+      - DEFAULT_TEMPERATURE=0.3
+      - RATE_LIMIT_ENABLED=true
+      - RATE_LIMIT_REQUESTS=100
+      - RATE_LIMIT_WINDOW_SECONDS=60
+      - LOG_LEVEL=INFO
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - chatbot-network
+
+networks:
+  chatbot-network:
+    driver: bridge
