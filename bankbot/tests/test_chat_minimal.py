@@ -1,3 +1,7 @@
+import os
+
+os.environ.setdefault("USE_SLM", "0")
+
 from fastapi.testclient import TestClient
 
 from bankbot.app.api import app
@@ -17,3 +21,4 @@ def test_chat_returns_reply():
     data = response.json()
     assert data["reply"].strip() != ""
     assert data["source"] in {"rag", "slm", "tool", "clarify", "escalate"}
+    assert data["source"] != "slm"

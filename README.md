@@ -47,3 +47,8 @@ BankBot is a production-oriented FastAPI service that delivers a multilingual (E
 - Optional packages (`sentence-transformers`, `bitsandbytes`) can be installed for future enhancements but are not required.
 - Logs are sanitized with PII redaction and written to `bankbot/logs/audit.log` for monitoring.
 - Run tests with `pytest -q` to ensure core functionality remains healthy.
+
+## Troubleshooting
+- `GET /` returns 404: confirm the API is running (`uvicorn bankbot.app.api:app`) and you are hitting the configured `HOST`/`PORT` from `.env`.
+- Slow responses on CPU: set `USE_SLM=0` in `.env` to disable Phi-3 and rely on TF-IDF answers for faster replies.
+- CORS errors from remote UI: update the FastAPI CORS settings or proxy the API so the UI origin is allowed when serving `bankbot/app/ui/web` from another host.

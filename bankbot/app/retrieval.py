@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 from .language import detect_language, normalize_text
 
@@ -26,7 +26,12 @@ KB_FILES = [
     DATA_DIR / "kb_hi.json",
 ]
 
+SCORE_THRESHOLD: float = 0.18
+
 KB_ENTRIES: List[Dict[str, Any]] = []
+KB_SIZE: int = 0
+LANGS: List[str] = []
+
 _TFIDF_VECTORIZER: Optional[TfidfVectorizer] = None
 _TFIDF_MATRIX = None
 _RETRIEVAL_READY = False
@@ -60,13 +65,21 @@ def load_kb() -> List[Dict[str, Any]]:
     if KB_ENTRIES:
         return KB_ENTRIES
 
+    langs: Set[str] = set()
+
     for kb_file in KB_FILES:
         try:
-            KB_ENTRIES.extend(_load_json(kb_file))
+            entries = _load_json(kb_file)
+            KB_ENTRIES.extend(entries)
+            langs.update(entry.get("lang", "en") for entry in entries)
         except FileNotFoundError:
             LOGGER.warning("Knowledge base file missing: %s", kb_file)
         except json.JSONDecodeError as exc:
             LOGGER.error("Failed to parse %s: %s", kb_file, exc)
+
+    global KB_SIZE, LANGS
+    KB_SIZE = len(KB_ENTRIES)
+    LANGS = sorted(langs) if langs else ["en"]
 
     _build_index()
     return KB_ENTRIES
@@ -129,4 +142,12 @@ def is_ready() -> bool:
 load_kb()
 
 
-__all__ = ["retrieve", "load_kb", "is_ready", "KB_ENTRIES"]
+__all__ = [
+    "retrieve",
+    "load_kb",
+    "is_ready",
+    "KB_ENTRIES",
+    "KB_SIZE",
+    "LANGS",
+    "SCORE_THRESHOLD",
+]

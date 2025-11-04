@@ -5,6 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
 
+from .retrieval import SCORE_THRESHOLD
+
 
 SAFE_ESCALATION_MESSAGE = (
     "I’m unable to help with that securely. Please contact our official support channel for further assistance."
@@ -67,7 +69,7 @@ def decide_action(
     if _contains_keywords(lowered, _INTEREST_KEYWORDS):
         return PolicyDecision(action="tool", tool="interest_rates")
 
-    if retrieval_score >= 0.38:
+    if retrieval_score >= SCORE_THRESHOLD:
         return PolicyDecision(action="answer", strategy="rag")
 
     if use_slm:

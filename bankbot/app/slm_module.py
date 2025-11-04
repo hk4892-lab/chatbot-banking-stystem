@@ -18,6 +18,10 @@ def _infer_device_kwargs(torch_module):
     return {"torch_dtype": torch_module.float32}
 
 
+class SLMLoadError(RuntimeError):
+    """Raised when the SLM cannot be loaded."""
+
+
 @lru_cache(maxsize=1)
 def _load_pipeline():
     if not USE_SLM:
@@ -26,14 +30,11 @@ def _load_pipeline():
 
     try:
         import torch  # type: ignore[import]
-        from transformers import (
-            AutoModelForCausalLM,
-            AutoTokenizer,
-            pipeline,
-        )
+        from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
     except Exception as exc:  # pragma: no cover - import failure path
-        LOGGER.warning("SLM dependencies unavailable: %s", exc)
-        return None
+        raise SLMLoadError(
+            "SLM dependencies are missing. Install torch and transformers to enable the Phi-3 mini model."
+        ) from exc
 
     try:
         tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, use_fast=True)
@@ -52,12 +53,20 @@ def _load_pipeline():
         LOGGER.info("Loaded SLM pipeline: %s", MODEL_ID)
         return text_pipe
     except Exception as exc:  # pragma: no cover - runtime load failure
-        LOGGER.error("Failed to load SLM pipeline: %s", exc)
-        return None
+        raise SLMLoadError(
+            f"Failed to download or load model '{MODEL_ID}'. Check network connectivity and model access permissions."
+        ) from exc
 
 
 def slm_available() -> bool:
-    return _load_pipeline() is not None
+    if not USE_SLM:
+        return False
+
+    try:
+        return _load_pipeline() is not None
+    except SLMLoadError as exc:  # pragma: no cover - handled gracefully
+        LOGGER.warning("SLM unavailable: %s", exc)
+        return False
 
 
 def _build_prompt(system: str, messages: List[dict]) -> str:
@@ -77,7 +86,12 @@ def _build_prompt(system: str, messages: List[dict]) -> str:
 
 
 def slm_generate(system: str, messages: List[dict]) -> str:
-    pipeline_fn = _load_pipeline()
+    try:
+        pipeline_fn = _load_pipeline()
+    except SLMLoadError as exc:
+        LOGGER.error("SLM generation aborted: %s", exc)
+        return ""
+
     if pipeline_fn is None:
         return ""
 

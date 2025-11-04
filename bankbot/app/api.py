@@ -2,34 +2,21 @@
 
 from __future__ import annotations
 
-import logging
 import re
-from typing import List, Literal
+from typing import List, Literal, Tuple
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from .config import LOG_PATH, USE_SLM
+from .config import USE_SLM
 from .language import detect_language
+from .logging_utils import log_info
 from .policy import SAFE_ESCALATION_MESSAGE, PolicyDecision, decide_action
-from .redaction import redact_for_logs
-from .retrieval import is_ready as retrieval_ready
+from .retrieval import LANGS, KB_SIZE, SCORE_THRESHOLD, is_ready as retrieval_ready
 from .retrieval import retrieve
 from .slm_module import slm_available, slm_generate
 from .tools import block_card_ticket, emi_calculator, interest_rates
-
-
-LOGGER = logging.getLogger("bankbot")
-LOGGER.setLevel(logging.INFO)
-if not LOGGER.handlers:
-    file_handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
-    formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
-    file_handler.setFormatter(formatter)
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(formatter)
-    LOGGER.addHandler(file_handler)
-    LOGGER.addHandler(stream_handler)
 
 
 class Message(BaseModel):
@@ -67,7 +54,13 @@ def root():
 @app.get("/healthz")
 def healthcheck():
     slm_status = bool(USE_SLM and slm_available())
-    return {"ok": True, "rag": retrieval_ready(), "slm": slm_status}
+    return {
+        "ok": True,
+        "rag": retrieval_ready(),
+        "slm": slm_status,
+        "kb_size": KB_SIZE,
+        "langs": LANGS,
+    }
 
 
 def _get_latest_user_message(messages: List[Message]) -> Message:
@@ -82,8 +75,8 @@ def _collect_system_prompt(messages: List[Message]) -> str:
     if system_messages:
         return "\n".join(system_messages)
     return (
-        "You are BankBot, a multilingual banking assistant that responds concisely, "
-        "follows policy, and never fabricates irreversible actions."
+        "You are BankBot, a multilingual banking assistant. Prioritise safety, never fabricate account "
+        "or transaction data, stay concise (2-5 sentences), and always reply in the user's language."
     )
 
 
@@ -92,7 +85,7 @@ def _extract_numbers(text: str) -> List[float]:
     return [float(c) for c in candidates]
 
 
-def _handle_tool(decision: PolicyDecision, message: Message) -> ChatResponse:
+def _handle_tool(decision: PolicyDecision, message: Message) -> Tuple[str, str, str]:
     lowered = message.content.lower()
     lang = detect_language(message.content)
 
@@ -106,7 +99,7 @@ def _handle_tool(decision: PolicyDecision, message: Message) -> ChatResponse:
             f"Based on a principal of ₹{principal:,.0f}, the EMI is approximately ₹{result['emi']:,.2f}. "
             f"Total payment is ₹{result['total_payment']:,.2f} with interest of ₹{result['total_interest']:,.2f}."
         )
-        return ChatResponse(reply=reply, lang=lang, source="tool")
+        return reply, lang, "tool"
 
     if decision.tool == "block_card_ticket":
         last4_match = re.search(r"(\d{4})\b", message.content)
@@ -116,7 +109,7 @@ def _handle_tool(decision: PolicyDecision, message: Message) -> ChatResponse:
             "I have raised a temporary block ticket for your card ending "
             f"{last4}. Reference ID: {result['ticket_id']}. Our team will call you shortly."
         )
-        return ChatResponse(reply=reply, lang=lang, source="tool")
+        return reply, lang, "tool"
 
     if decision.tool == "interest_rates":
         product_match = re.search(r"(savings|fixed deposit|home loan|personal loan)", lowered)
@@ -125,13 +118,10 @@ def _handle_tool(decision: PolicyDecision, message: Message) -> ChatResponse:
         reply = (
             f"The current interest rate for {product.replace('_', ' ')} is {result['rate_percent']:.1f}% per annum."
         )
-        return ChatResponse(reply=reply, lang=lang, source="tool")
+        return reply, lang, "tool"
 
-    return ChatResponse(
-        reply="I can help once I know which banking tool to use. Could you clarify your request?",
-        lang=lang,
-        source="clarify",
-    )
+    reply = "I can help once I know which banking tool to use. Could you clarify your request?"
+    return reply, lang, "clarify"
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -141,38 +131,40 @@ def chat(request: ChatRequest):
 
     latest_user = _get_latest_user_message(request.messages)
     lang = detect_language(latest_user.content)
-    redacted = redact_for_logs(latest_user.content)
-    LOGGER.info("chat_request lang=%s text=%s", lang, redacted)
+    log_info("chat.request", message=latest_user.content, lang=lang)
 
     retrieval_result = retrieve(latest_user.content)
     slm_ok = USE_SLM and slm_available()
     decision = decide_action(latest_user.content, retrieval_result.get("score", 0.0), use_slm=slm_ok)
 
-    if decision.action == "escalate":
-        return ChatResponse(reply=decision.message or SAFE_ESCALATION_MESSAGE, lang=lang, source="escalate")
+    def _finalize(reply: str, reply_lang: str, source: str, **context) -> ChatResponse:
+        log_info("chat.response", message=reply, lang=reply_lang, source=source, **context)
+        return ChatResponse(reply=reply, lang=reply_lang, source=source)
 
-    if decision.action == "tool":
-        return _handle_tool(decision, latest_user)
+    force_escalate = decision.action == "escalate"
 
-    if decision.action == "answer" and decision.strategy == "rag" and retrieval_result.get("answer"):
-        reply = retrieval_result["answer"]
-        return ChatResponse(reply=reply, lang=retrieval_result.get("lang", lang), source="rag")
+    if not force_escalate and decision.action == "tool":
+        reply, reply_lang, source = _handle_tool(decision, latest_user)
+        return _finalize(reply, reply_lang, source)
 
-    if decision.action == "answer" and decision.strategy == "slm" and slm_ok:
+    score = float(retrieval_result.get("score", 0.0))
+    answer = retrieval_result.get("answer", "")
+    answer_lang = retrieval_result.get("lang", lang)
+
+    if not force_escalate and answer and score >= SCORE_THRESHOLD:
+        return _finalize(answer, answer_lang, "rag", score=f"{score:.2f}")
+
+    if not force_escalate and slm_ok:
         system_prompt = _collect_system_prompt(request.messages)
         slm_reply = slm_generate(system_prompt, [msg.model_dump() for msg in request.messages])
         if slm_reply:
-            return ChatResponse(reply=slm_reply, lang=lang, source="slm")
-
-    if retrieval_result.get("answer"):
-        reply = (
-            "I have some information that might help: "
-            f"{retrieval_result['answer']}"
-        )
-        return ChatResponse(reply=reply, lang=retrieval_result.get("lang", lang), source="rag")
+            return _finalize(slm_reply, lang, "slm")
 
     clarify_text = "Could you share a few more details so I can assist accurately?"
-    return ChatResponse(reply=clarify_text, lang=lang, source="clarify")
+    if not force_escalate and (decision.action == "ask_clarify" or not answer):
+        return _finalize(clarify_text, lang, "clarify")
+
+    return _finalize(decision.message or SAFE_ESCALATION_MESSAGE, lang, "escalate")
 
 
 __all__ = ["app"]
